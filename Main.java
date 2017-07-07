@@ -11,7 +11,7 @@ class Main {
     {
     System.out.println("A is negative number");
     }
-    else 
+    else if(a>0)
     {
     System.out.println("A is postive number");
     }

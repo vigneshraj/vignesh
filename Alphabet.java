@@ -1,22 +1,32 @@
-import java.util.Scanner;
+  import java.util.Scanner;
 
-public class Alphabet
+public class LeapYear
 {
     public static void main(String args[])
-    {
-        char ch;
-        Scanner scan = new Scanner(System.in);
-    
-        System.out.print("Enter a Character : ");
-        ch = scan.next().charAt(0);
-    
-        if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z'))
+    {   
+        int year;
+        boolean flag=false;
+        Scanner vc= new Scanner(System.in);
+        System.out.println("Enter the year:");
+        year=vc.nextInt();
+        
+        if(year%400 ==0)
         {
-            System.out.print(ch + " is an Alphabet");
+            flag=true;
+        }
+        else if(year%100==0)
+        {
+            flag=false;
+        }
+        
+        if(flag)
+        {
+            System.out.println("Given year "+year+" is a Leap Year");
         }
         else
         {
-            System.out.print(ch + " is not an Alphabet");
+               System.out.println("Given year "+year+" is a Non-Leap Year");
         }
+
     }
 }
